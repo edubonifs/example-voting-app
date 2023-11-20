@@ -3,7 +3,7 @@ env:
     REGISTRY_HOST: "docker.io"
     IMAGE_NAME: "nginx"
     IMAGE_TAG: "latest"
-    DOCKERFILE_CONTEXT: "github/"
+    DOCKERFILE_CONTEXT: "github/example-voting-app"
 name: Container build, scan and push
 on: [push, pull_request]
 
