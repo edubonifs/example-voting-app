@@ -25,6 +25,11 @@ resource "kubernetes_deployment" "worker" {
         container {
           image = "dockersamples/examplevotingapp_worker"
           name  = "worker"
+          resources {
+            limits {
+              memory = "200Mi"
+            }
+          }
         }
       }
     }
