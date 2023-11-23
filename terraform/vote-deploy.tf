@@ -30,6 +30,11 @@ resource "kubernetes_deployment" "vote" {
             container_port = 80
             name           = "vote"
           }
+          resources {
+            limits {
+              memory = "200Mi"
+            }
+          }
         }
       }
     }
