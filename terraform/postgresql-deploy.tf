@@ -45,6 +45,11 @@ resource "kubernetes_deployment" "db" {
             mount_path = "/var/lib/postgresql/data"
             name       = "db-data"
           }
+          resources {
+            limits {
+              memory = "200Mi"
+            }
+          }
         }
 
         volume {
