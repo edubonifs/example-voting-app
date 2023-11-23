@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: statsd-exporter-config
+  namespace: default
+data:
+  statsd-mapping.conf: |
+    mappings:
+      # Example mapping rule
+      # StatsD metric name: 'vote_service.request.count'
+      # Prometheus metric name: 'vote_service_request_count'
+      - match: "vote_service.request.count"
+        name: "vote_service_request_count"
+        help: "The total number of requests to the vote service"
+        type: counter

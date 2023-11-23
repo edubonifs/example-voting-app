@@ -19,6 +19,9 @@ resource "kubernetes_deployment" "db" {
         labels = {
           app = "db"
         }
+        annotations = {
+          "prometheus.io/scrape" = "true"
+        }
       }
 
       spec {

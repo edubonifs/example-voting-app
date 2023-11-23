@@ -19,6 +19,9 @@ resource "kubernetes_deployment" "vote" {
         labels = {
           app = "vote"
         }
+        annotations = {
+          "prometheus.io/scrape" = "true"
+        }
       }
 
       spec {

@@ -19,6 +19,9 @@ resource "kubernetes_deployment" "redis" {
         labels = {
           app = "redis"
         }
+        annotations = {
+          "prometheus.io/scrape" = "true"
+        }
       }
 
       spec {
