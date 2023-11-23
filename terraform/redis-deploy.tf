@@ -35,6 +35,11 @@ resource "kubernetes_deployment" "redis" {
             mount_path = "/data"
             name       = "redis-data"
           }
+          resources {
+            limits {
+              memory = "200Mi"
+            }
+          }
         }
 
         volume {
