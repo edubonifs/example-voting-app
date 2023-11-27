@@ -66,3 +66,4 @@ jobs:
           --console-log \
           --dbpath=${GITHUB_WORKSPACE}/cache/db/ \
           --cachepath=${GITHUB_WORKSPACE}/cache/scanner-cache/
+
